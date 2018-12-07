@@ -1,4 +1,4 @@
-package com.rinatprod.start;
+package com.rinatprod;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
