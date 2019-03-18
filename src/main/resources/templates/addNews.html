@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>Введите данные</p>
+    <form action="/news/addNews" method="post">
+        <input type="text" name="title" placeholder="Название" required>
+        <textarea name="description" required>Описание новости</textarea>
+        <input type="text" name="tag" placeholder="Тег">
+        <input type="submit" value="Создать новость">
+    </form>
+</body>
+</html>

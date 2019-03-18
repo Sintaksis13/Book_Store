@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>The most popular news</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        table {
+            border: darkblue solid 1px;
+        }
+
+        td {
+            border-left: 1px solid darkblue;
+            border-bottom: 1px solid darkblue;
+        }
+
+        .title {
+            width: 15%;
+        }
+
+        .descr {
+            width: 75%;
+        }
+
+        .tag {
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <form action="/">
+        <input type="submit" value="На главную">
+    </form>
+    <form action="/news/addNews_input">
+        <input type="submit" value="Добавить новую новость">
+    </form>
+    <table>
+        <tr>
+            <td>Название</td>
+            <td>Описание</td>
+            <td>Тег</td>
+        </tr>
+        <tr th:each="sNews: ${news}">
+            <td class="title"><span th:text="${sNews.getTitle()}"></span></td>
+            <td class="descr"><span th:text="${sNews.getDescription()}"></span></td>
+            <td class="tag"><span th:text="${sNews.getTag()}"></span></td>
+        </tr>
+    </table>
+</body>
+</html>
